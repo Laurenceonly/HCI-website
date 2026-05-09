@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <title>ClefTune</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="style.css">
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+          <header>
+                    <a href="#home" class="logo">CleftTune</a>
+                    <nav>
+                              <a href="#home">Home</a>
+                              <a href="#solution">Solution</a>
+                              <a href="#How">How It Works</a>
+                              <a href="#features">Features</a>
+                              <a href="#pricing">Pricing</a>
+                              <a href="#team">Team</a>
+                    </nav>
+                    <a href="#" class="btn">Get App</a>
+          </header>
+
+          <section class="hero" id="home">
+                    <div class="hero-text fade">
+                        <img src="cf.png" class="hero-circle-img" alt="CleftTune logo">
+                              <h1>Speak Freely.<br><span class="highlight">Be Understood.</span></h1>
+                              <p>AI-powered speech translation designed for individuals with cleft palate.</p>
+                    </div>
+
+                    <img src="clefttune.jpg" class="phone-img fade" alt="CleftTune app preview">
+          </section>
+
+          <section id="solution">
+                    <h2 class="section-title fade">The Challenge & Solution</h2>
+                    <div class="split">
+                              <div class="glass fade">
+                                        <h3>🚫 The Problem</h3>
+                                        <p>Speech clarity issues create misunderstandings and communication barriers.
+                                        </p>
+                              </div>
+
+                              <div class="glass fade">
+                                        <h3>✅ Our Solution</h3>
+                                        <p>CleftTune converts unclear speech into clear subtitles using AI processing.
+                                        </p>
+                              </div>
+                    </div>
+          </section>
+
+          <!-- ✅ RESTORED FULL TEXT -->
+          <section id="How">
+                    <h2 class="section-title fade">How It Works</h2>
+                    <div class="steps">
+
+                              <div class="glass fade">
+                                        <span>1</span>
+                                        <h3>Speak</h3>
+                                        <p>User speaks naturally into the microphone while the system capture real-time voice input for processing and analysis.</p>
+                              </div>
+
+                              <div class="glass fade">
+                                        <span>2</span>
+                                        <h3>Clean Audio</h3>
+                                        <p>The system removes background noise and enhances speech clarity to ensure accurate and high-quality audio input for AI processing.</p>
+                              </div>
+
+                              <div class="glass fade">
+                                        <span>3</span>
+                                        <h3>AI Process</h3>
+                                        <p>AI analyzes the cleaned audio, detects speech patterns, and interprets intended words using trained models for improved understanding.</p>
+                              </div>
+
+                              <div class="glass fade">
+                                        <span>4</span>
+                                        <h3>Text Output</h3>
+                                        <p>The processed speech is converted into clear, readable, real-time
+                                                  subtitles  that support smooth and effective communication.</p>
+                              </div>
+
+                    </div>
+          </section>
+
+          <section id="features">
+                    <h2 class="section-title fade">Features</h2>
+                    <div class="features">
+                              <div class="glass fade">
+                                        <h3>Real-Time</h3>
+                                        <p>IProvides instant real-time subtitles for clearer communication understanding
+                                        </p>
+                              </div>
+                              <div class="glass fade">
+                                        <h3>Audio Cleaning</h3>
+                                        <p>Audio cleaning improves speech clarity by reducing background noise</p>
+                              </div>
+                              <div class="glass fade">
+                                        <h3>AI Model</h3>
+                                        <p>AI model processes and interprets speech using trained system</p>
+                              </div>
+                    </div>
+          </section>
+
+          <section id="pricing">
+                    <h2 class="section-title fade">Pricing</h2>
+                    <div class="pricing">
+                              <div class="glass fade">
+                                        <h3>Free</h3>
+                                        <p>₱0</p>
+                                        <p>Free plan offers simple speech translation <br>with limited processing speed
+                                        </p>
+                              </div>
+
+                              <div class="glass fade">
+                                        <h3>Premium</h3>
+                                        <p>₱99</p>
+                                        <p>Premium unlocks smoother performance<br> with more reliable real-time
+                                                  subtitles</p>
+                              </div>
+                    </div>
+          </section>
+
+          <section id="team">
+                    <h2 class="section-title fade">Team</h2>
+                    <div class="team-container">
+                              <div class="team-card fade"><img src="member 1.png">
+                                        <h5>Dianne Claire Bico</h5>
+                                        <h3>CEO</h3>
+                              </div>
+                              <div class="team-card fade"><img src="member 2.png">
+                                        <h5>Aljhen Elepante</h5>
+                                        <h3>COO</h3>
+                              </div>
+                              <div class="team-card fade"><img src="member 3.png">
+                                        <h5>Ralph Laurence Sayo</h5>
+                                        <h3>CTO</h3>
+                              </div>
+                              <div class="team-card fade"><img src="member 4.png">
+                                        <h5>Andrea Amoroso</h5>
+                                        <h3>CMO</h3>
+                              </div>
+                    </div>
+          </section>
+
+          <footer>
+                    <p>© 2026 CleftTune</p>
+          </footer>
+
+          <script>
+                    const faders = document.querySelectorAll(".fade");
+
+                    const observer = new IntersectionObserver(entries => {
+                              entries.forEach(e => {
+                                        if (e.isIntersecting) {
+                                                  e.target.classList.add("show");
+                                        }
+                              });
+                    });
+
+                    faders.forEach(el => observer.observe(el));
+
+                    /* navbar animation */
+                    const links = document.querySelectorAll("nav a");
+
+                    links.forEach(link => {
+                              link.addEventListener("click", () => {
+                                        document.body.classList.add("page-transition");
+
+                                        setTimeout(() => {
+                                                  document.body.classList.remove("page-transition");
+                                        }, 400);
+
+                                        links.forEach(l => l.classList.remove("active"));
+                                        link.classList.add("active");
+                              });
+                    });
+          </script>
+
+</body>
+
+</html>
